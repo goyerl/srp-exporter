@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 5m
+  scrape_timeout: 10s
+
+scrape_configs:
+  - job_name: srp
+    metrics_path: /
+    scheme: http
+    static_configs: 
+      - targets: ['srp-exporter:8000']
+        labels:
+          exporter: srp
