@@ -69,6 +69,7 @@
           {
             "exemplar": true,
             "expr": "energy_usage",
+            "instant": true,
             "interval": "",
             "legendFormat": "",
             "refId": "A"
@@ -128,6 +129,7 @@
           {
             "exemplar": true,
             "expr": "energy_cost",
+            "instant": true,
             "interval": "",
             "legendFormat": "",
             "refId": "A"
@@ -211,7 +213,7 @@
         "targets": [
           {
             "exemplar": true,
-            "expr": "energy_usage",
+            "expr": "energy_usage{job=\"srp\"}",
             "interval": "",
             "legendFormat": "",
             "refId": "A"
@@ -295,7 +297,7 @@
         "targets": [
           {
             "exemplar": true,
-            "expr": "energy_cost",
+            "expr": "energy_cost{job=\"srp\"}",
             "interval": "",
             "legendFormat": "",
             "refId": "A"
@@ -305,6 +307,7 @@
         "type": "timeseries"
       }
     ],
+    "refresh": "30m",
     "schemaVersion": 30,
     "style": "dark",
     "tags": [],
@@ -319,5 +322,5 @@
     "timezone": "",
     "title": "SRP Energy",
     "uid": "dnrmqeZnk",
-    "version": 1
+    "version": 2
   }
